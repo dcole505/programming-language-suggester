@@ -8,3 +8,8 @@
 #user-info {
   display:none;
 }
+
+#question-set1 {
+  text-align: left;
+  font-weight: bold;
+}
