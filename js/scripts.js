@@ -3,6 +3,7 @@ $(document).ready(function(){
     event.preventDefault();
 
     $("#user-info").show();
+    $("#display").hide();
   });
 
   $("#user-info").submit(function(event){
@@ -17,6 +18,7 @@ $(document).ready(function(){
     $(".user-name").text(firstNameInput);
     $("#user-info").hide();
     $("#results").show();
+    $("#display").show();
 
     determineLanguage(questionOneInput, questionTwoInput, questionThreeInput);
   });
@@ -24,15 +26,21 @@ $(document).ready(function(){
 
 function determineLanguage(questionOneInput, questionTwoInput, questionThreeInput){
 
-  if((questionOneInput === "ruby") || (questionTwoInput === "ruby") || (questionThreeInput === "ruby") && (questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput)){
-    $("#ruby-card").toggle();
+  if(((questionOneInput === "ruby") || (questionTwoInput === "ruby") || (questionThreeInput === "ruby")) && ((questionOneInput === questionTwoInput) 
+  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
+    $("#ruby-card").show();
+    $("#java-card").hide();
+    $("#javascript-card").hide();
 
-  } else if ((questionOneInput === "java") || (questionTwoInput === "java") || (questionThreeInput === "java") && (questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput)){
-    $("#java-card").toggle();
-  } else if ((questionOneInput === "js") || (questionTwoInput === "js") || (questionThreeInput === "js") && (questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput)){
-    $("#javascript-card").toggle();
+  } else if (((questionOneInput === "java") || (questionTwoInput === "java") || (questionThreeInput === "java")) && ((questionOneInput === questionTwoInput) 
+  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
+    $("#java-card").show();
+    $("#ruby-card").hide();
+    $("#javascript-card").hide();
+  } else if (((questionOneInput === "js") || (questionTwoInput === "js") || (questionThreeInput === "js")) && ((questionOneInput === questionTwoInput) 
+  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
+    $("#javascript-card").show();
+    $("#ruby-card").hide();
+    $("#java-card").hide();
   }
 }
