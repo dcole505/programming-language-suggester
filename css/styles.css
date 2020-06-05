@@ -13,3 +13,28 @@
   text-align: left;
   font-weight: bold;
 }
+
+img {
+  width: 300px;
+  height: 250px;
+}
+
+#results {
+  display: none;
+}
+
+.card {
+  font-weight: bold;
+}
+
+#ruby-card {
+  display:none;
+}
+
+#java-card {
+  display:none;
+}
+
+#javascript-card {
+  display: none;
+}

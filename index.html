@@ -15,7 +15,7 @@
       <p class="lead">Learn about the programming language that is right for you!</p>
       <hr class="my-4">
       <p>Take a short survey to be matched with a programming language.</p>
-      <button id="form-button" class="btn btn-primary btn-lg" type="button">Click to begin</button>
+      <button id="form-reveal" class="btn btn-primary btn-lg" type="button">Click to begin</button>
     </div>
     <div class="container">
       <form id="user-info">
@@ -98,13 +98,40 @@
           </label>
         </div>
 
-        <button id="form-submit" class="btn btn-primary btn-lg" type="submit">Submit</button>
+        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
       </form>
     </div>
     <div class="container">
       <div id="display">
-        <h1 id="display-header">Results</h1>
-        <p><span class="user-name"></span>, it looks as though <span class="language"></span> would be an excellent fit for you.</p>
+        <div id="results">
+          <h1 id="display-header">Results</h1>
+          <p><span class="user-name"></span>, according to the answers you provided, the following language would be an excellent fit for you.</p>
+        </div>
+        <br>
+        <div class="card" id="ruby-card">
+          <img class="card-img-top card-layout" src="img/ruby.png" alt="Ruby Programming Language">
+          <div class="card-body">
+            <h5 class="card-title">Ruby Programming Language</h5>
+            <p class="card-text">"A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write."</p>
+            <a href="https://www.ruby-lang.org/en/" class="btn btn-primary" target="_blank">Learn more</a>
+          </div>
+        </div>
+        <div class="card" id="java-card">
+          <img class="card-img-top card-layout" src="img/java.jpg" alt="Java Programming Language">
+          <div class="card-body">
+            <h5 class="card-title">Java Programming Language</h5>
+            <p class="card-text">"The Java Programming Language is a general-purpose, concurrent, strongly typed, class-based object-oriented language."</p>
+            <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/index.html" class="btn btn-primary" target="_blank">Learn more</a>
+          </div>
+        </div>
+        <div class="card" id="javascript-card">
+          <img class="card-img-top card-layout" src="img/javascript.png" alt="JavaScript Programming Language">
+          <div class="card-body">
+            <h5 class="card-title">JavaScript Programming Language</h5>
+            <p class="card-text">"JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="btn btn-primary" target="_blank">Learn more</a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
