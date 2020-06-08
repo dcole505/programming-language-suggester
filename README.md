@@ -21,7 +21,7 @@ conditional if/else statements, one of three programming languages will be selec
 
 ## Known Bugs
 
-_There is a known bug in the logic of the program which does not accurately reflect the users choices with correct output in some test cases._
+_There are no know bugs at this time._
 
 ## Support and contact details
 
