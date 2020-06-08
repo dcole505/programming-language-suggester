@@ -9,7 +9,7 @@
   display:none;
 }
 
-#question1-header {
+.question-header {
   text-align: left;
   font-weight: bold;
 }
@@ -36,5 +36,9 @@ img {
 }
 
 #javascript-card {
+  display: none;
+}
+
+#python-card {
   display: none;
 }
