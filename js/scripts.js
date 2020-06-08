@@ -14,33 +14,24 @@ $(document).ready(function(){
     const questionOneInput = $('input:radio[name="question1"]:checked').val();
     const questionTwoInput = $('input:radio[name="question2"]:checked').val();
     const questionThreeInput = $('input:radio[name="question3"]:checked').val();
+    const questionFourInput = $('input:radio[name="question4"]:checked').val();
+    const questionFiveInput = $('input:radio[name="question5"]:checked').val();
     
     $(".user-name").text(firstNameInput);
     $("#user-info").hide();
     $("#results").show();
     $("#display").show();
 
-    determineLanguage(questionOneInput, questionTwoInput, questionThreeInput);
+    determineLanguage(questionOneInput, questionTwoInput, questionThreeInput, questionFourInput, questionFiveInput);
   });
 ;})
 
-function determineLanguage(questionOneInput, questionTwoInput, questionThreeInput){
+function determineLanguage(questionOneInput, questionTwoInput, questionThreeInput, questionFourInput, questionFiveInput){
 
-  if(((questionOneInput === "ruby") || (questionTwoInput === "ruby") || (questionThreeInput === "ruby")) && ((questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
-    $("#ruby-card").show();
-    $("#java-card").hide();
-    $("#javascript-card").hide();
+  if(!questionOneInput || !questionTwoInput || !questionThreeInput || !questionFourInput || !questionFiveInput){
+    alert("Please make sure to answer all of the questions!");
+  }else if(questionOneInput === "ruby"){
 
-  } else if (((questionOneInput === "java") || (questionTwoInput === "java") || (questionThreeInput === "java")) && ((questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
-    $("#java-card").show();
-    $("#ruby-card").hide();
-    $("#javascript-card").hide();
-  } else if (((questionOneInput === "js") || (questionTwoInput === "js") || (questionThreeInput === "js")) && ((questionOneInput === questionTwoInput) 
-  || (questionOneInput === questionThreeInput) || (questionTwoInput === questionThreeInput))){
-    $("#javascript-card").show();
-    $("#ruby-card").hide();
-    $("#java-card").hide();
   }
+  
 }
